@@ -1,0 +1,191 @@
+:root {
+--primary: lightgray;
+--secondary: rgb(18, 90, 79);
+--tertiary: coral;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(238, 231, 220);
+    flex-wrap: wrap;
+    display: flex;
+}
+
+header {
+padding: 30px;
+color: var(--secondary);
+font-size: 30px;
+text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px var(--tertiary)solid;
+    font-size: 25px;
+}
+
+nav a {
+    padding-top:20px,20px;
+    padding-right: 20px;
+    padding-left: 5px;
+    color: var(--secondary);
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    color: var(--tertiary);
+    border-left: 1px var(--tertiary)solid;
+}
+
+.cap-letter {
+    color: var(--tertiary);
+}
+
+header h1 {
+    color: var(--secondary);
+    text-align: center;
+    font-weight: lighter;
+}
+
+.building {
+    height: 159px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/web-dev.png");
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    color: var(--secondary);
+    font-weight: lighter;
+    font-size: 30px;
+    border-bottom: 1px var(--tertiary)solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content-section {
+    color: var(--secondary);
+    font-size: 20px;
+    border-left: 1px var(--tertiary)solid;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section {
+    padding-left: 30px;
+
+}
+.hobbies {
+    max-width: 700px;
+    max-height: 400px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+ 
+.navigation {
+    position:absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+ 
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px var(--secondary) solid;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background: var(--tertiary);
+}
+ 
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.hobby-slideshow {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.hobby-slide {
+    width: 20%;
+    transition: 0.6s;
+}
+.hobby-slide img {
+    width: 100%;
+    height: 100%;
+}
+ 
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -20%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -40%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -60%;
+}
+#r5:checked ~ .s1 {
+    margin-left: -80%;
+}
+main section {
+    display: inline-block;
+}
+.content-section a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: bolder;
+}
+ .cool-button{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    border:1px var(--secondary)solid;
+    color: var(--tertiary);
+    padding: 20px;
+    margin: 20px;
+    list-style-type: none;
+    width: 300px;
+    height: 100px;
+    float: right;
+    
+}
+.box a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--tertiary);
+    text-align: center;
+    font-size: 30px;
+}
+.box img {
+    opacity: 0;
+}
+.box img:hover {
+    opacity: 1;
+}
+.box:hover {
+    background-color: var(--secondary);
+    }
+
+@media screen and (max-width: 768px) {
+    body,
+    nav,
+    .box {
+        flex-direction: column;
+    }
+}
